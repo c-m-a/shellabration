@@ -1,8 +1,4 @@
 # frozen_string_literal: true
 
+require 'json'
 require 'shellabration/version'
-
-module Shellabration
-  class Error < StandardError; end
-  # Your code goes here...
-end
