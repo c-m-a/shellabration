@@ -5,4 +5,8 @@ $LOAD_PATH.unshift("#{__dir__}/../lib")
 
 require 'shellabration'
 
-Shellabration::CLI.new
+result = 0
+cli = Shellabration::CLI.new
+
+result = cli.run
+exit result
