@@ -4,3 +4,4 @@ require 'json'
 
 require 'shellabration/version'
 require 'shellabration/cli'
+require 'shellabration/options'
