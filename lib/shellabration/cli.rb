@@ -7,6 +7,7 @@ module Shellabration
     STATUS_ERROR       = 2
 
     def initialize
+      @options = {}
     end
 
     # @api public
@@ -18,6 +19,17 @@ module Shellabration
     # @param args [Array<String>] command line arguments
     # @return [Integer] UNIX exit code
     def run(args = ARGV)
+      @options, paths = Options.new.parse(args)
+      paths.each do |f|
+        if File.exist?(f)
+          File.open(f).each do |l|
+            puts l
+          end
+        else
+          return STATUS_ERROR
+        end
+      end
+      STATUS_SUCCESS
     end
 
     private
