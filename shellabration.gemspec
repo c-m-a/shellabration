@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/cma4c/shellabration'
   spec.license       = 'MIT'
 
-  s.metadata = {
+  spec.metadata = {
     'homepage_uri' => spec.homepage,
     'changelog_uri' => 'https://github.com/cma4c/shellabration/blob/master/CHANGELOG.md',
     'source_code_uri' => 'https://github.com/cma4c/shellabration/',
@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
     end
   end
   spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables   = ['shellabration']
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 2.0'
